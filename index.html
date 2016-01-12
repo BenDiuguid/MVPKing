@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>King Of MVPs</title>
+
+		<meta name="description" content="King of MVPs - Minimum Viable Product">
+		<meta name="author" content="Ben Diuguid">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="icon" href="./favicon.png" type="image/png" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/ir_black.css">
+
+		<!-- Google Analytics -->
+		<script>
+		  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			//
+		  // ga('create', 'UA-64940095-1', 'auto');
+		  // ga('send', 'pageview');
+		</script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>King of MVPs</h1>
+					<h3>(Minimum Viable Product)</h3>
+					<p>
+						<small>Created by <a href="https://bendiuguid.github.io" target="_blank">Ben Diuguid</a> / <a href="https://twitter.com/bendiuguid" target="_blank">@bendiuguid</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>History of the Web</h2>
+				</section>
+
+				<section>
+					<h2>The Past</h2>
+				</section>
+
+				<section>
+					<p>Page Based Web</p>
+					<p>Server-side applications</p>
+				</section>
+
+				<section>
+					<h3>HTTP Model</h3>
+					<p>Classic 3-tier architecture</p>
+					<p>UI -- Server -- Database</p>
+					<p>Client makes a request, the server fufills that request, and that's the end of the line</p>
+				</section>
+
+				<section>
+					<h3>Rise of the SPAs</h3>
+					<p>Front-end interactivity</p>
+					<p>Driven by mobile devices</p>
+				</section>
+
+				<section>
+					<p>This type of app is much harder to write</p>
+					<p>Code in the cloud, code on the client</p>
+					<p>Support multiple platforms, multiple codebases</p>
+					<p>Expensive to have native apps for every platform</p>
+				</section>
+
+				<section>
+					<h4>If you were to roll your own solution, what would you need?</h4>
+					<ul>
+						<li class="fragment fade-in">Way of watching database for changes</li>
+						<li class="fragment fade-in">Protocol that runs on top of WebSockets to push data to the client in <strong>realtime</strong></li>
+						<li class="fragment fade-in">As data changes, you have to actually change the DOM</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Modern apps serve data, not html</p>
+					<p class="fragment fade-in">Modern apps should not need a refresh button</p>
+					<p class="fragment fade-in">Modern apps should exist in real time</p>
+					<p class="fragment fade-in">Is refreshing the page necessary anymore?</p>
+				</section>
+
+				<section>
+					<h2>The Solution?</h2>
+				</section>
+
+				<section data-background="http://alexbachuk.com/wp-content/uploads/2014/05/universe.png">
+					<h2>The Case For Meteor</h2>
+				</section>
+
+				<section>
+					<h3>Meteor Provides</h3>
+					<ul>
+						<li>Complete JS Application Platform</li>
+						<li>SDK and different libraries</li>
+						<li>Build tooling</li>
+						<li>Distribution: mobile updates, hot code push</li>
+						<li>Running code in the cloud</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Why JavaScript?</h1>
+				</section>
+
+				<section>
+					<h3>The One Language</h3>
+					<h3>To Rule Them All</h3>
+					<p>Runs everywhere</p>
+					<p>Most popular language on GitHub</p>
+					<p>npm - Largest programming language package repository ever</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>What is Meteor?</h2>
+						<p class="fragment fade-in">Open Source platform for building apps in JS</p>
+						<p class="fragment fade-in">Built to power the next generation apps</p>
+						<p class="fragment fade-in">Perfect for Hackathons! :D</p>
+					</section>
+
+					<section>
+						<h3>One language everywhere</h3>
+						<p>
+							Isomorphic/Universal APIs mean that the same code, written in the same language, can run on both client and server.
+						</p>
+					</section>
+
+					<section>
+						<h3>Browser and Mobile</h3>
+						<p>
+							A great experience both on the web and as a phone or tablet app.
+						</p>
+					</section>
+
+					<section>
+						<h3>Live updates</h3>
+						<p>
+							Data updates live on the screen as it changes. Users can collaborate seamlessly.
+						</p>
+					</section>
+
+					<section>
+						<h3>Fullstack package system</h3>
+						<p>
+							Fullstack package system complete with one build tool that builds all parts of your app.
+						</p>
+					</section>
+
+					<section>
+						<h3>Radically less code</h3>
+						<p>
+							Accomplish in 10 lines what would otherwise take 1000, thanks to a reactive programming model that extends all the way from the database to the user's screen.
+						</p>
+					</section>
+
+					<section>
+						<h3>Hot deploys</h3>
+						<p>
+							Type one command to push your app into production and update all connected browsers and devices. No need to go through the App Store.
+						</p>
+					</section>
+
+					<section data-background="https://upload.wikimedia.org/wikipedia/commons/5/52/Hubble2005-01-barred-spiral-galaxy-NGC1300.jpg">
+						<h3>Galaxy</h3>
+						<p>Containerized hosting solution by MDG</p>
+						<p>Using Docker and AWS</p>
+						<p>Handles a lot of the issues of scaling automagically</p>
+						<p><strong>FREE app.meteor.com hosting</strong></p>
+					</section>
+				</section>
+
+				<!-- TODO: insert content here. -->
+
+				<section>
+					<h2>Further Learning</h2>
+					<ul>
+						<li>Official Meteor Tutorial - <a href="https://www.meteor.com/tutorials/blaze/creating-an-app" target="_blank">Official Meteor Tutorial</a></li>
+						<li>Discover Meteor - <a href="https://book.discovermeteor.com/" target="_blank">book.discovermeteor.com</a></li>
+						<li>The Meteor Guide - <a href="http://guide.meteor.com/" target="_blank">guide.meteor.com</a></li>
+						<li>Official Meteor Docs - <a href="https://docs.meteor.com/" target="_blank">docs.meteor.com</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						+ Any Questions?
+						<br>
+						+ Slides availabe
+						<br>
+						&nbsp; &nbsp; - <a href="http://bendiuguid.github.io/MVPKing" target="_blank">bendiuguid.github.io/MVPKing</a>
+						<br>
+						+ <a href="https://twitter.com/bendiuguid" target="_blank">@bendiuguid</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
