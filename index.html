@@ -56,7 +56,7 @@
 			<div class="slides">
 				<section>
 					<h1>King of MVPs</h1>
-					<h3>(Minimum Viable Product)</h3>
+					<h3>The Case for Meteor</h3>
 					<p>
 						<small>Created by <a href="https://bendiuguid.github.io" target="_blank">Ben Diuguid</a> / <a href="https://twitter.com/bendiuguid" target="_blank">@bendiuguid</a></small>
 					</p>
@@ -68,9 +68,6 @@
 
 				<section>
 					<h2>The Past</h2>
-				</section>
-
-				<section>
 					<p>Page Based Web</p>
 					<p>Server-side applications</p>
 				</section>
@@ -78,8 +75,8 @@
 				<section>
 					<h3>HTTP Model</h3>
 					<p>Classic 3-tier architecture</p>
-					<p>UI -- Server -- Database</p>
-					<p>Client makes a request, the server fufills that request, and that's the end of the line</p>
+					<p>UI | Server | Database</p>
+					<p>Client-request |  server-response</p>
 				</section>
 
 				<section>
@@ -89,10 +86,11 @@
 				</section>
 
 				<section>
-					<p>This type of app is much harder to write</p>
+					<h2>Modern Apps</h2>
 					<p>Code in the cloud, code on the client</p>
 					<p>Support multiple platforms, multiple codebases</p>
 					<p>Expensive to have native apps for every platform</p>
+					<p>This type of app is much harder to write</p>
 				</section>
 
 				<section>
@@ -115,19 +113,8 @@
 					<h2>The Solution?</h2>
 				</section>
 
-				<section data-background="http://alexbachuk.com/wp-content/uploads/2014/05/universe.png">
-					<h2>The Case For Meteor</h2>
-				</section>
+				<section data-background="http://addis.meteor.com/images/meteor-logo.png">
 
-				<section>
-					<h3>Meteor Provides</h3>
-					<ul>
-						<li>Complete JS Application Platform</li>
-						<li>SDK and different libraries</li>
-						<li>Build tooling</li>
-						<li>Distribution: mobile updates, hot code push</li>
-						<li>Running code in the cloud</li>
-					</ul>
 				</section>
 
 				<section>
@@ -139,7 +126,22 @@
 					<h3>To Rule Them All</h3>
 					<p>Runs everywhere</p>
 					<p>Most popular language on GitHub</p>
-					<p>npm - Largest programming language package repository ever</p>
+					<p>npm</p>
+				</section>
+
+				<section data-background="http://alexbachuk.com/wp-content/uploads/2014/05/universe.png">
+					<h2 style="color: white">The Case For Meteor</h2>
+				</section>
+
+				<section>
+					<h3>Meteor Provides</h3>
+					<ul>
+						<li>Complete JS Application Platform</li>
+						<li>SDK and different libraries</li>
+						<li>Build tooling</li>
+						<li>Deployment</li>
+						<li>Running code in the cloud</li>
+					</ul>
 				</section>
 
 				<section>
@@ -158,16 +160,9 @@
 					</section>
 
 					<section>
-						<h3>Browser and Mobile</h3>
+						<h3>Radically less code</h3>
 						<p>
-							A great experience both on the web and as a phone or tablet app.
-						</p>
-					</section>
-
-					<section>
-						<h3>Live updates</h3>
-						<p>
-							Data updates live on the screen as it changes. Users can collaborate seamlessly.
+							Accomplish in 10 lines what would otherwise take 1000, thanks to a reactive programming model that extends all the way from the database to the user's screen.
 						</p>
 					</section>
 
@@ -179,9 +174,16 @@
 					</section>
 
 					<section>
-						<h3>Radically less code</h3>
+						<h3>Live updates</h3>
 						<p>
-							Accomplish in 10 lines what would otherwise take 1000, thanks to a reactive programming model that extends all the way from the database to the user's screen.
+							Data updates live on the screen as it changes. Users can collaborate seamlessly.
+						</p>
+					</section>
+
+					<section>
+						<h3>Browser and Mobile</h3>
+						<p>
+							A great experience both on the web and as a phone or tablet app.
 						</p>
 					</section>
 
@@ -193,24 +195,163 @@
 					</section>
 
 					<section data-background="https://upload.wikimedia.org/wikipedia/commons/5/52/Hubble2005-01-barred-spiral-galaxy-NGC1300.jpg">
-						<h3>Galaxy</h3>
-						<p>Containerized hosting solution by MDG</p>
-						<p>Using Docker and AWS</p>
-						<p>Handles a lot of the issues of scaling automagically</p>
-						<p><strong>FREE app.meteor.com hosting</strong></p>
+						<div style="color: white;">
+							<h3 style="color: white;">Galaxy</h3>
+							<p>Containerized hosting solution by MDG</p>
+							<p>Using Docker and AWS</p>
+							<p>Handles a lot of the issues of scaling automagically</p>
+							<p><strong>FREE app.meteor.com hosting</strong></p>
+						</div>
 					</section>
 				</section>
 
-				<!-- TODO: insert content here. -->
+				<section>
+					<h2>Bread & Butter</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>File/Folder Structure</h2>
+						<ul>
+							<li>/server - Code only run on server</li>
+							<li>/client - Code only run on client</li>
+							<li>/anythingElse - Code runs on both the server and client</li>
+							<li>/public - static assets like pics</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Load Order</h3>
+						<ul>
+							<li>/lib - Loaded <em>before</em> anything else</li>
+							<li>main.* files - Loaded <em>after</em> everything else</li>
+							<li>Everything else loads in alphabetical order based on file name</li>
+						</ul>
+					</section>
+
+					<section>
+						<h4>Otherwise unopinionated</h4>
+						<p>Meteor is great at locating all your code</p>
+						<p>Webpack/Browserify support available through packages</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Packages</h2>
+					<ul>
+						<li>Official Packages</li>
+						<li>Third-party Packages</li>
+						<li>Local Packages</li>
+						<li>NPM Packages</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>View Layer</h2>
+					<p><strong>Blaze</strong> - Meteor's default view engine</p>
+					<p><strong>React & Angular</strong> - Official support came with Meteor 1.2</p>
+					<p>Support for many other libraries, Polymer, Vue, etc.</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Collections</h2>
+						<p>Database Everywhere</p>
+						<p>MiniMongo</p>
+						<p>Usually define collections in /lib</p>
+						<pre><code class="javascript" data-trim contenteditable>
+Posts = new Mongo.Collection('posts');
+						</code></pre>
+						<p>Note: We did not <em>var</em> the <strong>Posts</strong></p>
+					</section>
+
+					<section>
+						<h3>meteor mongo</h3>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="http://cdn1.theodysseyonline.com/files/2014/09/09/635458683216914332478801840_pub.jpg">
+						<h1 style="color: white;">Pub Subs</h1>
+					</section>
+
+					<section>
+						<h3>Publications & Subscriptions</h3>
+						<p>Distributed Data Protocol (DDP)</p>
+						<p>REST for websockets</p>
+					</section>
+
+					<section>
+						<h3>Example</h3>
+
+						<pre><code class="javascript" data-trim contenteditable>
+// In /lib
+Posts = new Meteor.Collection('posts')
+
+// On the server
+Meteor.publish('postsByAuthor', function(author) {
+  return Posts.find({ flagged: false, author: author });
+});
+
+// On the client
+Meteor.subscribe('postsByAuthor', 'bob-smith');
+
+Posts.find();
+// Client will only see Posts that have been flagged false
+//   and Posts with the author bob-smith
+						</code></pre>
+						<p>Fully reactive</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Accounts</h2>
+						<p><code>meteor add accounts-ui accounts-password</code></p>
+						<p><a href="https://www.meteor.com/accounts" target="_blank">meteor.com/accounts</a></p>
+					</section>
+
+					<section>
+						<p><code>{{> loginButtons}}</code></p>
+						<p><code>Meteor.user() // Current User Object</code></p>
+						<p><code>Meteor.userId() // Current User ID</code></p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Deployment</h2>
+					<ul>
+						<li><strong>FREE Meteor subdomain</strong></li>
+						<li>meteor deploy myapp.meteor.com</li>
+						<li>For everywhere else there's <a href="https://github.com/arunoda/meteor-up" target="_blank">Meteor Up (mup)</a></li>
+					</ul>
+				</section>
 
 				<section>
 					<h2>Further Learning</h2>
 					<ul>
 						<li>Official Meteor Tutorial - <a href="https://www.meteor.com/tutorials/blaze/creating-an-app" target="_blank">Official Meteor Tutorial</a></li>
-						<li>Discover Meteor - <a href="https://book.discovermeteor.com/" target="_blank">book.discovermeteor.com</a></li>
 						<li>The Meteor Guide - <a href="http://guide.meteor.com/" target="_blank">guide.meteor.com</a></li>
 						<li>Official Meteor Docs - <a href="https://docs.meteor.com/" target="_blank">docs.meteor.com</a></li>
 					</ul>
+				</section>
+
+				<section>
+					<h1>To Summarize</h1>
+				</section>
+
+				<section data-background="http://i.imgur.com/ATZuZj4.gif">
+					<h2 style="color: white;">Light Speed App Development</h2>
+					<ul style="color: white;">
+						<li>RealTime through DDP</li>
+						<li>Super developer friendly</li>
+						<li>The platform for the Future</li>
+						<li>JavaScript</li>
+					</ul>
+				</section>
+
+				<section data-background="http://i.imgur.com/s8JlpMN.gif">
+
 				</section>
 
 				<section style="text-align: left;">
@@ -223,6 +364,8 @@
 						&nbsp; &nbsp; - <a href="http://bendiuguid.github.io/MVPKing" target="_blank">bendiuguid.github.io/MVPKing</a>
 						<br>
 						+ <a href="https://twitter.com/bendiuguid" target="_blank">@bendiuguid</a>
+						<br>
+						+ Check out <a href="https://medium.com/@BenDiuguid">My Blog</a> for more JS stuff
 					</p>
 				</section>
 
